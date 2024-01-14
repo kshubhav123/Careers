@@ -7,7 +7,7 @@ const ListUser = () => {
     const [data, setdata] = useState([]);
 
     const userList = async () => {
-        return await axios.get(`${process.env.REACT_APP_API}/userlist`);
+        return await axios.get(`${process.env.REACT_APP_API}`);
     }
 
 
@@ -41,7 +41,7 @@ const Table = ({data,userList}) => {
         console.log(id);
         let confirmation = window.confirm("Delete or Not");
         if (confirmation)
-            await axios.delete(`${process.env.REACT_APP_API}/remove/${id}`).then((res) => {
+            await axios.delete(`${process.env.REACT_APP_API}/${id}`).then((res) => {
                 if (res.data) {
                     userList()
                 }
@@ -98,8 +98,8 @@ const Table = ({data,userList}) => {
                                 <td className='small'>{new Date(users.createdAt).toLocaleDateString()}</td>
                                 <td>
                                     <div className='d-flex'>
-                                        <Link to={`/updateuser/${users._id}`} className='text-decoration-none me-2 text-success'> <i class="fa-solid fa-pen"></i> </Link>
-                                        <button onClick={() => handleDelete(users._id)} className='border-0 bg-white ms-2 text-danger'><i class="fa-solid fa-xmark"></i></button>
+                                        <Link to={`/updateuser/${users.id}`} className='text-decoration-none me-2 text-success'> <i class="fa-solid fa-pen"></i> </Link>
+                                        <button onClick={() => handleDelete(users.id)} className='border-0 bg-white ms-2 text-danger'><i class="fa-solid fa-xmark"></i></button>
                                     </div>
                                 </td>
                             </tr>
