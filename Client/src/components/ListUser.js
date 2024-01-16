@@ -62,8 +62,8 @@ const Table = ({data,userList}) => {
                     <th scope="col" className='py-3'>Phone</th>
                     <th scope="col" className='py-3'>City</th>
                     <th scope="col" className='py-3'>Experience</th>
-                    <th scope="col" className='py-3'>Refrence</th>
                     <th scope="col" className='py-3'>PlateformLink</th>
+                    <th scope="col" className='py-3'>Reference</th>
                     <th scope="col" className='py-3'>CareerLink</th>
                     <th scope="col" className='py-3'>Status</th>
                     <th scope="col" className='py-3'>Action</th>
