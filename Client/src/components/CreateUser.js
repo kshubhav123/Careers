@@ -43,7 +43,6 @@ const Form = () => {
         console.log(status);
         let data = { name, email, mobile, city, status, exp, link, plateform, plateform_link }
         console.log("1", data);
-
         createUser(data).then((res) => {
             console.log("2", res.data);
             if (res.data) {
@@ -92,7 +91,7 @@ const Form = () => {
 
 
                     <div class="form-group my-3">
-                        <input type="text" name="plateform" style={inputStyle} value={plateform} onChange={(e) => setPlateform(e.target.value)} placeholder="Enter Plateform" required />
+                        <input type="text" name="plateform" style={inputStyle} value={plateform} onChange={(e) => setPlateform(e.target.value)} placeholder="Enter Plateform / Refrence" required />
                     </div>
 
                     <div class="form-group my-3">
@@ -109,7 +108,7 @@ const Form = () => {
                         {/* <input type="text" name="status" style={inputStyle}  value={status} onChange={(e) => setStatus(e.target.value)} placeholder="Enter Status" required /> */}
                     </div>
 
-                    <button type='submit' onClick={handleSubmit} class="btn btn-outline-dark mx-1 my-3">Create User</button>
+                    <button type='submit' onClick={handleSubmit} class="btn btn-outline-dark mx-1 my-3">Create</button>
                 </form>
             </div>
             <div className='col-md-4'></div>

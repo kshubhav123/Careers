@@ -62,11 +62,10 @@ const Table = ({data,userList}) => {
                     <th scope="col" className='py-3'>Phone</th>
                     <th scope="col" className='py-3'>City</th>
                     <th scope="col" className='py-3'>Experience</th>
-                    <th scope="col" className='py-3'>Plateform</th>
-                    <th scope="col" className='py-3'>Plateform Link</th>
-                    <th scope="col" className='py-3'>Career Link</th>
+                    <th scope="col" className='py-3'>Refrence</th>
+                    <th scope="col" className='py-3'>PlateformLink</th>
+                    <th scope="col" className='py-3'>CareerLink</th>
                     <th scope="col" className='py-3'>Status</th>
-                    <th scope="col" className='py-3'>Date</th>
                     <th scope="col" className='py-3'>Action</th>
                 </tr>
             </thead>
@@ -76,26 +75,25 @@ const Table = ({data,userList}) => {
                         return (
                             <tr key={index}>
                                 <th scope="row" className='small'> {index + 1}</th>
-                                <td className='small'>{users.name}</td>
-                                <td className='small'>{users.email}</td>
-                                <td className='small'>{users.mobile}</td>
-                                <td className='small'>{users.city}</td>
-                                <td className='small'>{users.exp}</td>
+                                <td className='small'>{users.name?users.name:"NA"}</td>
+                                <td className='small'>{users.email?users.email:"NA"}</td>
+                                <td className='small'>{users.mobile?users.mobile:"NA"}</td>
+                                <td className='small'>{users.city?users.city:"NA"}</td>
+                                <td className='small'>{users.exp?users.exp:"NA"}</td>
 
                                 <td className='small'>
-                                    {users.link ? <a href={users.plateform_link} className='text-success fw-bold'> Link  </a> : "none"}
+                                    {users.link ? <a href={users.plateform_link} className='text-success fw-bold'> Link  </a> : "NA"}
                                 </td>
 
-                                <td className='small'>{users.plateform}</td>
+                                <td className='small'>{users.plateform ? users.plateform :"NA"  }</td>
 
                                 <td className='small'>
-                                    {users.link ? <a href={users.link} className='text-success fw-bold text-decoration-none'>Apply </a> : "none"}
+                                    {users.link ? <a href={users.link} className='text-success fw-bold text-decoration-none'>Apply </a> : "NA"}
                                 </td>
 
 
 
-                                <td className='small'>{users.status}</td>
-                                <td className='small'>{new Date(users.createdAt).toLocaleDateString()}</td>
+                                <td className='small'>{users.status?users.status:"NA"}</td>
                                 <td>
                                     <div className='d-flex'>
                                         <Link to={`/updateuser/${users.id}`} className='text-decoration-none me-2 text-success'> <i class="fa-solid fa-pen"></i> </Link>

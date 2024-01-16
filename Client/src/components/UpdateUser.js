@@ -103,7 +103,7 @@ const Form = () => {
                     </div>
 
                     <div class="form-group my-3">
-                        <input style={inputStyle} type="text" name="plateform" value={plateform} onChange={handleChange} placeholder="Enter Plateform" required />
+                        <input style={inputStyle} type="text" name="plateform" value={plateform} onChange={handleChange} placeholder="Enter Plateform / Refrence" required />
                     </div>
 
                     <div class="form-group my-3">
