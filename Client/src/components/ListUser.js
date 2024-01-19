@@ -7,7 +7,7 @@ const ListUser = () => {
     const [data, setdata] = useState([]);
 
     const userList = async () => {
-        return await axios.get(`${process.env.REACT_APP_API}`);
+        return await axios.get(`${process.env.REACT_APP_API}/userlist`);
     }
 
 
@@ -41,7 +41,7 @@ const Table = ({data,userList}) => {
         console.log(id);
         let confirmation = window.confirm("Delete or Not");
         if (confirmation)
-            await axios.delete(`${process.env.REACT_APP_API}/${id}`).then((res) => {
+            await axios.delete(`${process.env.REACT_APP_API}/remove/${id}`).then((res) => {
                 if (res.data) {
                     userList()
                 }

@@ -42,7 +42,7 @@ const Form = () => {
     }
 
     const singleUser = async (user_id) => {
-        return await axios.get(`${process.env.REACT_APP_API}/${user_id}`);
+        return await axios.get(`${process.env.REACT_APP_API}/singleuser/${user_id}`);
     }
 
     useEffect(() => {
@@ -52,7 +52,7 @@ const Form = () => {
     }, [id])
 
     const updateUser = async (userData) => {
-        return await axios.put(`${process.env.REACT_APP_API}/${id}`, userData);
+        return await axios.put(`${process.env.REACT_APP_API}/update/${id}`, userData);
     }
 
 

@@ -35,7 +35,7 @@ const Form = () => {
     const [plateform_link, setPlateform_link] = useState()
 
     const createUser = async (userData) => {
-        return await axios.post(`${process.env.REACT_APP_API}`, userData);
+        return await axios.post(`${process.env.REACT_APP_API}/create`, userData);
     }
 
     const handleSubmit = (e) => {
