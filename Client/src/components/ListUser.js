@@ -96,7 +96,7 @@ const Table = ({data,userList}) => {
                                 <td className='small'>{users.status?users.status:"NA"}</td>
                                 <td>
                                     <div className='d-flex'>
-                                        <Link to={`/updateuser/${users.id}`} className='text-decoration-none me-2 text-success'> <i class="fa-solid fa-pen"></i> </Link>
+                                        <Link to={`/updateuser/${users._id}`} className='text-decoration-none me-2 text-success'> <i class="fa-solid fa-pen"></i> </Link>
                                         <button onClick={() => handleDelete(users.id)} className='border-0 bg-white ms-2 text-danger'><i class="fa-solid fa-xmark"></i></button>
                                     </div>
                                 </td>
